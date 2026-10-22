@@ -111,4 +111,4 @@ global.json                         .NET SDK version and test runner
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/LICENSE)
