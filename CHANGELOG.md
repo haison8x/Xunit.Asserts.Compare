@@ -17,6 +17,7 @@ Requires xUnit.net v3 and .NET 10. See [docs/migration-v2-to-v4.md](docs/migrati
 - `DeepAssert.Equivalent` for comparing objects of different types, such as an anonymous object against a DTO. It fails when the expected object has a member that the actual object lacks.
 - `DeepAssert.Contains` and `DeepAssert.DoesNotContain` for finding items by deep equality.
 - XML documentation for IntelliSense, and README and docs included in the package.
+- Guide for moving from xUnit.net's built-in `Assert.Equivalent`.
 
 ### Changed
 

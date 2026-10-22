@@ -96,3 +96,4 @@ The exception types are xUnit.net's own (`EqualException`, `NotEqualException`, 
 
 - [Use cases](use-cases.md): recipes for ignoring generated ids, checking API responses, unordered query results and more
 - [API reference](api-reference.md)
+- [Moving from `Assert.Equivalent`](migrating-from-assert-equivalent.md)

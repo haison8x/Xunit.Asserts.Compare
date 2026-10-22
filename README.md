@@ -19,6 +19,16 @@ Expected: Customer { CreatedAt = 0001-01-01T00:00:00.0000000, Email = "jacob@exa
 Actual:   Customer { CreatedAt = 0001-01-01T00:00:00.0000000, Email = "jacob@example.com", Id = 00000000-0000-0000-0000-000000000000, Lines = [], Name = "James", ··· }
 ```
 
+## Why xUnit.Asserts.Compare?
+
+**It goes further than `Assert.Equivalent`.** xUnit.net's built-in deep comparison stops at the first difference and has no tolerances or string options. `DeepAssert` reports every difference at once. It also accepts numeric and date tolerances, compares strings case-insensitively or ignoring whitespace, pairs collection items by key, and uses custom comparers when you ask it to. See [Moving from `Assert.Equivalent`](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/migrating-from-assert-equivalent.md).
+
+**It keeps the xUnit.net style.** `DeepAssert.Equal(expected, actual)` reads like `Assert.Equal`. Failures throw xUnit.net's own `EqualException`, so you do not need to learn a fluent `.Should()` syntax or adopt a whole assertion framework to get deep comparison.
+
+**It stays small.** It is one static class with options, and it depends only on `xunit.v3.assert` and CompareNETObjects. It is MIT licensed.
+
+If you want a complete fluent assertion library covering strings, exceptions, events and more, a full framework such as AwesomeAssertions or FluentAssertions may suit you better. Pick this library if deep comparison is what you need and you want it to look like the rest of your xUnit.net tests.
+
 ## Install
 
 ```shell
@@ -86,6 +96,7 @@ DeepAssert.DoesNotContain(cancelledLine, lines);
 - [Getting started](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/getting-started.md): installation, first assertions, reading failure messages
 - [Use cases](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/use-cases.md): recipes for common testing situations
 - [API reference](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/api-reference.md): every assertion and option
+- [Moving from `Assert.Equivalent`](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/migrating-from-assert-equivalent.md): what you gain, how to translate calls, behaviour differences
 - [Migrating from 2.x to 4.x](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/docs/migration-v2-to-v4.md)
 - [Changelog](https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/CHANGELOG.md)
 
