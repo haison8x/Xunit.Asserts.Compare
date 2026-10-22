@@ -1,0 +1,20 @@
+<Project>
+  <!-- Central package management: every NuGet version used in the repository is set here. -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup Label="Library">
+    <PackageVersion Include="CompareNETObjects" Version="4.84.0" />
+    <!-- Keep at the lowest 4.x: xunit.v3 pins xunit.v3.assert to its own exact version, so a higher minimum
+         here would break consumers on older xunit.v3 4.x releases. -->
+    <PackageVersion Include="xunit.v3.assert" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Tests">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.12.0" />
+    <PackageVersion Include="xunit.v3" Version="4.0.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="4.0.1" />
+  </ItemGroup>
+</Project>

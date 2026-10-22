@@ -1,0 +1,19 @@
+<Project>
+  <!-- Settings shared by every project in the repository. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>haison8x</Authors>
+    <Company>haison8x</Company>
+    <Copyright>Copyright (c) 2017-2026 haison8x</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/haison8x/Xunit.Asserts.Compare</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/haison8x/Xunit.Asserts.Compare</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>

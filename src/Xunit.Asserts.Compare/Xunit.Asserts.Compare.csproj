@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>xUnit.Asserts.Compare</PackageId>
+    <Version>4.0.0</Version>
+    <Description>Deep object comparison assertions for xUnit.net v3, powered by CompareNETObjects. Compare whole object graphs in one line, with fluent options to ignore members, ignore collection order, allow numeric and date tolerances, and plug in custom comparers.</Description>
+    <PackageTags>xunit;xunit-v3;assert;assertions;deep-equal;compare;object-comparison;testing</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReleaseNotes>See https://github.com/haison8x/Xunit.Asserts.Compare/blob/master/CHANGELOG.md</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Xunit.Asserts.Compare.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CompareNETObjects" />
+    <PackageReference Include="xunit.v3.assert" />
+  </ItemGroup>
+</Project>
